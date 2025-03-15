@@ -1,0 +1,454 @@
+/*--------------------------------------------------------------
+# ROOT
+--------------------------------------------------------------*/
+
+:root {
+    --custom-color-l-01: rgb(255, 255, 255);
+    --custom-color-l-02: rgb(22, 22, 22);
+    --custom-color-l-03: rgb(217, 217, 217);
+    --custom-color-l-04: rgb(92, 92, 92);
+    --custom-color-l-05: rgb(169, 50, 38);
+    --custom-color-l-06: rgb(205, 97, 85);
+
+    --custom-color-o-01: rgb(28, 40, 51);
+    --custom-color-o-02: rgb(255, 255, 255);
+
+}
+
+/*--------------------------------------------------------------
+# GENERAL
+--------------------------------------------------------------*/
+body {
+    position: relative;
+    min-height: 100vh;
+    padding-top: 58px;
+}
+
+.custom-fondo-oscuro {
+    background-color: var(--custom-color-o-01);
+}
+
+p {
+    color: var(--custom-color-l-04);
+}
+
+.custom-fondo-oscuro h1,
+.custom-fondo-oscuro p {
+    color: var(--custom-color-o-02);
+}
+
+.btn:not(.nav-btns button, .custom-miniatura button) {
+    background-color: var(--custom-color-l-01);
+    color: var(--custom-color-l-02);
+    font-weight: 500;
+    border: 1px solid var(--custom-color-l-03);
+}
+
+.custom-fondo-oscuro .btn:not(.nav-btns button, .custom-miniatura button) {
+    background-color: var(--custom-color-o-01);
+    color: var(--custom-color-o-02);
+    border: 1px solid var(--custom-color-o-02);
+}
+
+.btn:not(.nav-btns button, .custom-miniatura button):hover {
+    background-color: var(--custom-color-l-02);
+    color: var(--custom-color-l-01);
+}
+
+.custom-fondo-oscuro .btn:not(.nav-btns button, .custom-miniatura button):hover {
+    background-color: var(--custom-color-o-02);
+    color: var(--custom-color-o-01);
+}
+
+.btn:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+/*--------------------------------------------------------------
+# HEADER
+--------------------------------------------------------------*/
+
+.custom-navbar {
+    background-color: var(--custom-color-l-01);
+    border-bottom: 2px solid var(--custom-color-l-03);
+}
+
+.custom-fondo-oscuro .custom-navbar {
+    background-color: var(--custom-color-o-01);
+    border-bottom: 2px solid var(--custom-color-o-02);
+}
+
+.custom-navbar a {
+    color: var(--custom-color-l-02);
+}
+
+.custom-fondo-oscuro .custom-navbar a {
+    color: var(--custom-color-o-02);
+}
+
+/*--------------------------------------------------------------
+# CAMBIAR TEMA
+--------------------------------------------------------------*/
+
+.custom-cambiar-color {
+    background-color: var(--custom-color-l-02);
+    display: flex;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    width: 100px;
+    height: 35px;
+    border-radius: 12px;
+    border: 1px solid var(--custom-color-l-03);
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-cambiar-color span {
+    z-index: 1;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.custom-cambiar-color .bxs-moon {
+    color: var(--custom-color-l-01);
+}
+
+.custom-cambiar-color::after {
+    display: block;
+    background-color: var(--custom-color-l-01);
+    width: 3.6rem;
+    height: 33px;
+    position: absolute;
+    left: -2px;
+    right: unset;
+    border-radius: 12px;
+    border: 1px solid var(--custom-color-l-03);
+    transition: all .5s ease;
+    content: "";
+}
+
+.custom-cambiar-color.active {
+    background-color: var(--custom-color-o-02);
+    border: 1px solid var(--custom-color-o-02);
+}
+
+.custom-fondo-oscuro .bxs-sun {
+    color: var(--custom-color-o-01);
+}
+
+.custom-fondo-oscuro .bxs-moon {
+    color: var(--custom-color-o-02);
+}
+
+.custom-cambiar-color.active::after {
+    background-color: var(--custom-color-o-01);
+    left: unset;
+    right: -1px;
+    border: 1px solid var(--custom-color-o-02);
+}
+
+/*--------------------------------------------------------------
+# ASIDE
+--------------------------------------------------------------*/
+.custom-aside {
+    background-color: var(--custom-color-l-01);
+    border: 2px solid var(--custom-color-l-03);
+    min-height: 100vh;
+    padding: 0;
+    vertical-align: top;
+    width: 280px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 56px;
+    z-index: 999;
+    overflow-y: scroll;
+}
+
+.custom-fondo-oscuro .custom-aside {
+    background-color: var(--custom-color-o-01);
+    color: var(--custom-color-o-02);
+    border: 2px solid var(--custom-color-o-02);
+}
+
+.custom-panel-herramienta {
+    height: 100%;
+}
+
+/*--------------------------------------------------------------
+# HERRAMIENTA
+--------------------------------------------------------------*/
+.custom-herramienta-titulo {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--custom-color-l-03);
+}
+
+.custom-herramienta-titulo h5 {
+    margin-bottom: 0;
+}
+
+.custom-herramienta-botones {
+    text-align: center;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.custom-herramienta-botones .btn {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.custom-herramienta-botones .custom-btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*--------------------------------------------------------------
+# MAIN
+--------------------------------------------------------------*/
+
+.custom-main-inicio .container .row {
+    min-height: calc(100vh - 58px);
+    padding: 12px;
+}
+
+.custom-btn-comenzar {
+    padding: 10px 28px;
+    border-radius: 5px;
+}
+
+.custom-main-archivo {
+    padding: 10px;
+}
+
+@media (min-width: 992px) {
+    .custom-main-archivo {
+        margin-right: 280px; /* anchura de aside */
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-main-archivo {
+        padding-bottom: 80px; /* altura de botón herramienta*/
+    }
+}
+
+.custom-contenedor-archivo {
+    min-height: calc(100vh - 80px);
+    background-color: var(--custom-color-l-01);
+    border: 1px dashed var(--custom-color-l-03);
+    border-radius: 20px;
+    position: relative;
+}
+
+.custom-contenedor-archivo .custom-texto-centro {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.custom-fondo-oscuro .custom-contenedor-archivo .custom-texto-centro {
+    color: var(--custom-color-o-02);
+}
+
+.custom-contenedor-archivo .custom-vista-archivos {
+    padding: 12px;
+}
+
+.custom-fondo-oscuro .custom-contenedor-archivo {
+    background-color: var(--custom-color-o-01);
+    border: 1px dashed var(--custom-color-o-02);
+}
+
+.custom-miniatura .custom-alerta-no-existente {
+    background-color: var(--custom-color-l-06);
+    border: 2px solid var(--custom-color-l-05);
+    
+}
+
+.custom-alerta-no-existente {
+    background-color: var(--custom-color-l-06);
+    box-shadow: 0px 4px 8px var(--custom-color-l-05);
+}
+
+.custom-miniatura {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid var(--custom-color-l-03);
+}
+
+.custom-fondo-oscuro .custom-miniatura {
+    color: var(--custom-color-o-02);
+}
+
+.custom-miniatura .card-text {
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.custom-eliminar-archivo {
+    border-top: 1px solid var(--custom-color-l-03);
+    font-weight: 500;
+}
+
+.custom-eliminar-archivo:hover {
+    background-color: var(--custom-color-l-02);
+    color: var(--custom-color-l-01);
+}
+
+.custom-fondo-oscuro .custom-eliminar-archivo:not(.custom-alerta-no-existente) {
+    color: var(--custom-color-o-02);
+}
+
+.custom-fondo-oscuro .custom-eliminar-archivo:hover {
+    background-color: var(--custom-color-o-02);
+    color: var(--custom-color-o-01);
+}
+
+.custom-miniatura .custom-icon {
+    width: 60px;
+    height: 60px;
+    margin: 12px;
+}
+
+/*--------------------------------------------------------------
+# BOTÓN MODAL DE HERRAMIENTA
+--------------------------------------------------------------*/
+.custom-boton-herramienta {
+    margin-top: 58px;
+}
+
+/*--------------------------------------------------------------
+# MODAL DE HERRAMIENTA
+--------------------------------------------------------------*/
+.custom-modal-contenido {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.custom-fondo-oscuro .custom-modal-contenido {
+    background-color: var(--custom-color-o-01);
+    color: var(--custom-color-o-02);
+}
+
+.custom-modal-footer {
+    justify-content: center;
+    padding: 0.75rem;
+}
+
+.custom-modal-footer .custom-btn-close {
+    background-color: var(--custom-color-l-03);
+    color: var(--custom-color-l-02);
+    font-weight: 500;
+    height: 40px;
+    border-radius: 15px;
+    border: 1px solid var(--custom-color-l-03);
+    width: 100%;
+}
+
+.custom-modal-footer .custom-btn-close:hover {
+    background-color: var(--custom-color-l-02);
+    color: var(--custom-color-l-01);
+}
+
+/*--------------------------------------------------------------
+# MODAL GENERAL
+--------------------------------------------------------------*/
+
+.custom-swal-modal {
+    background-color: var(--custom-color-l-01);
+}
+
+.custom-fondo-oscuro .custom-swal-modal {
+    background-color: var(--custom-color-o-01);
+}
+
+.custom-fondo-oscuro .custom-swal-title {
+    color: var(--custom-color-o-02);
+}
+
+.custom-swal-loader {
+    height: 150px;
+    width: 150px;
+    border-width: 10px;
+}
+
+.custom-swal-button {
+    background-color: var(--custom-color-l-03);
+    color: var(--custom-color-l-02);
+    border-radius: 5px;
+    border: 1px solid var(--custom-color-l-03);
+    font-weight: 500;
+    margin: 5px;
+    padding: 10px;
+    width: 80px;
+}
+
+.custom-swal-button:focus-visible {
+    outline: none;
+}
+
+.custom-swal-button:hover {
+    background-color: var(--custom-color-l-02);
+    color: var(--custom-color-l-01);
+    border: 1px solid var(--custom-color-l-01);
+}
+
+
+.custom-fondo-oscuro .custom-swal-button {
+    background-color: var(--custom-color-o-01);
+    color: var(--custom-color-o-02);
+    border: 1px solid var(--custom-color-o-02);
+}
+
+.custom-fondo-oscuro .custom-swal-button:hover {
+    background-color: var(--custom-color-o-02);
+    color: var(--custom-color-o-01);
+}
+
+/*--------------------------------------------------------------
+# FOOTER
+--------------------------------------------------------------*/
+
+.custom-footer-inicio {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 58px;
+
+    background-color: var(--custom-color-l-01);
+    color: var(--custom-color-l-02);
+    border-top: 2px solid var(--custom-color-l-03);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.custom-footer-inicio .container {
+    text-align: center;
+}
+
+.custom-fondo-oscuro .custom-footer-inicio {
+    background-color: var(--custom-color-o-01);
+    color: var(--custom-color-o-02);
+    border-top: 2px solid var(--custom-color-o-02);
+}

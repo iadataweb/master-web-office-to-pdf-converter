@@ -1,0 +1,1 @@
+<input type="file" class="d-none" id="custom-js-input-archivo" multiple>
