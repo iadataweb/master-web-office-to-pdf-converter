@@ -18,6 +18,7 @@
     const DB_CHARSET = "";   // Charset de la base de datos (ej., utf8)
 
     //Configuración de API keys de iLoveAPI
+    //Nota
 	const ILOVEAPI_PUBLIC_KEY = "";
     const ILOVEAPI_PRIVATE_KEY = "";
 
